@@ -36,8 +36,11 @@ export default ({ mode }) => {
         '@': SRC_DIR
       }
     },
+    // server: {
+    //   host: true
+    // },
     server: {
-      host: true
+      port: '3000'
     }
   });
 };

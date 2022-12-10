@@ -1,0 +1,23 @@
+.navbar {
+  .navbar-inner {
+    display: flex;
+    justify-content: center;
+    a:hover {
+      color: red;
+    }
+  }
+  .fb_Image {
+    display: block;
+    backface-visibility: hidden;
+    height: 70%;
+    border-radius: 50%;
+  }
+  .Logo_Image {
+    display: block;
+    backface-visibility: hidden;
+    height: 100%;
+  }
+  .title_text {
+    font-weight: 500;
+  }
+}
