@@ -4,14 +4,13 @@ export const ROUTE_PATH = {
   home: '/home',
   login: '/login',
   register: '/register',
-  introduce: '/introduce',
-
+  introduce: '/introduce'
 };
 
 // Data header
 export const DATA_HEADER = [
-  { id: 1, name: 'TRANG CHỦ' },
-  { id: 2, name: 'GIỚI THIỆU' },
+  { id: 1, name: 'TRANG CHỦ', routerName: '/' },
+  { id: 2, name: 'GIỚI THIỆU', routerName: '/introduce' },
   { id: 3, name: 'BẢNG GIÁ DỊCH VỤ' },
   { id: 4, name: 'ĐÀO TẠO' },
   { id: 5, name: 'BLOG' },
@@ -31,5 +30,22 @@ export const DATA_SLIDE = [
   {
     id: 3,
     img: 'https://previews.123rf.com/images/kostsov/kostsov1801/kostsov180100081/93958941-modern-barbershop-interior-with-chairs-3d-rendering.jpg'
+  }
+];
+
+export const DATA_INTRODUCE = [
+  {
+    id: 1,
+    img: 'https://storage.30shine.com/ResourceWeb/data/images/hanh-trinh-toa-sang/30shine-toc-mullet.jpg',
+    title: ' Phúc lột xác mái tóc để suốt bao năm giúp ngoại hình mới cực cuốn hút',
+    decription:
+      'Thay đổi kiểu tóc đã để suốt bao năm là một quyết định vô cùng khó khăn nhưng Phúc đã vượt qua nỗi sợ đó và tạo một kiểu tóc mới hoàn toàn '
+  },
+  {
+    id: 2,
+    img: 'https://storage.30shine.com/ResourceWeb/data/images/hanh-trinh-toa-sang/30shine-toc-mullet.jpg',
+    title: ' Phúc lột xác mái tóc để suốt bao năm giúp ngoại hình mới cực cuốn hút',
+    decription:
+      'Thay đổi kiểu tóc đã để suốt bao năm là một quyết định vô cùng khó khăn nhưng Phúc đã vượt qua nỗi sợ đó và tạo một kiểu tóc mới hoàn toàn '
   }
 ];

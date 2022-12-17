@@ -18,12 +18,15 @@ const MyApp = () => {
     on: {
       offline: offline,
       online: online
+    },
+    dialog: {
+      usernamePlaceholder: 'Phone'
     }
   };
 
   return (
     <App {...params}>
-      <View browserHistory={true} main className="hair-shop" />
+      <View browserHistory={true} browserHistorySeparator={''} main className="hair-shop" />
     </App>
   );
 };

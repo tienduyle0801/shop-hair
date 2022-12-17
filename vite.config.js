@@ -35,12 +35,9 @@ export default ({ mode }) => {
       alias: {
         '@': SRC_DIR
       }
-    },
+    }
     // server: {
     //   host: true
     // },
-    server: {
-      port: '3000'
-    }
   });
 };
