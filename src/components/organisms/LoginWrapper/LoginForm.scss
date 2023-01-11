@@ -1,0 +1,11 @@
+.demo-login-screen {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.login-screen.modal-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
