@@ -1,7 +1,8 @@
 import React from 'react';
 import routes from '../js/router';
 import { App, f7, View } from 'framework7-react';
-
+import { Provider } from 'react-redux';
+import { store } from '../store';
 const MyApp = () => {
   const offline = () => {
     f7.dialog.alert(t('dev-0023'));
@@ -25,9 +26,11 @@ const MyApp = () => {
   };
 
   return (
-    <App {...params}>
+    <Provider store={store}>
+      <App {...params}>
       <View browserHistory={true} browserHistorySeparator={''} main className="hair-shop" />
     </App>
+    </Provider>
   );
 };
 

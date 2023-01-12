@@ -1,10 +1,11 @@
 import React from 'react';
 import './Header.scss';
-import { Navbar, Link, f7 } from 'framework7-react';
+import {Link, f7 } from 'framework7-react';
 import SearchDialog from '../SearchDialog/SearchDialog';
 import { useState } from 'react';
-import { ROUTE_PATH } from '../../../constants/constant';
-const Header = ({ title, LoginForm }) => {
+import { DATA_AUTHOR , DATA_HEADER } from '../../../constants/constant';
+const Header = () => {
+  
   const [isShowSearchDialog, setIsShowSearchDialog] = useState(false);
 
   const handleCloseSearchDialog = () => {
@@ -16,7 +17,7 @@ const Header = ({ title, LoginForm }) => {
       <Link>
         <img src="Logo.png" alt="" className="item_logo" />
       </Link>
-      {title.map((e) => (
+      {DATA_HEADER.map((e) => (
         <div
           onClick={() => {
             f7.view.main.router.navigate(e.routerName);
@@ -40,12 +41,15 @@ const Header = ({ title, LoginForm }) => {
         </Link>
       </div>
       <div className="wrapper_login">
-        <button className=" button button-fill color-red " onClick={LoginForm}>
-          Đăng Nhập
-        </button>
-        <button className=" button button-fill color-red" onClick={LoginForm}>
-          Đăng Ký
-        </button>
+        {DATA_AUTHOR.map ( e => 
+        <button 
+        key={e.id}
+        onClick={() => {
+          f7.view.main.router.navigate(e.routerName);
+        }}
+         className=" button button-fill color-red ">
+          {e.name}
+        </button>)}
       </div>
       {isShowSearchDialog && <SearchDialog handleCloseSearchDialog={handleCloseSearchDialog} />}
     </div>

@@ -40,6 +40,9 @@
     height: 40px;
     z-index: 10000000000000;
   }
+  ::placeholder {
+    color: white;
+  }
 }
 
 @keyframes fadeInRight {
@@ -52,3 +55,4 @@
     transform: translateX(0);
   }
 }
+

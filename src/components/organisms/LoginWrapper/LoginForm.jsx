@@ -1,19 +1,49 @@
-import React from 'react';
-import { LoginScreen, Page, LoginScreenTitle, ListInput, List, ListButton } from 'framework7-react';
-import './LoginForm.scss';
+import React, { useState} from "react";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../../store/UserSlice";
+import './LoginForm.scss'
 
-const LoginForm = ({ open, handleClose }) => {
-  return (
-    <LoginScreen className="demo-login-screen" opened={open}>
-      <List form className="form-login">
-        <LoginScreenTitle>Framework7</LoginScreenTitle>
-        <ListInput label="Username" type="text" placeholder="Your username" />
-        <ListInput label="Password" type="password" placeholder="Your password" />
-        <ListButton>Sign In</ListButton>
-        <ListButton onClick={handleClose}>Cancel</ListButton>
-      </List>
-    </LoginScreen>
+const  LoginWrapper  = () =>  {
+  const [userName , setUserName] = useState('');
+  const [password , setPassWord] = useState('');
+
+
+
+  const handleChange = (e, type) => {
+    if(type === 'user') {
+      setUserName(e.target.value)
+    }else if(type === 'pass')
+      setPassWord(e.target.value)
+    else{
+      return null
+    }
+  }
+  
+  const dispatch = useDispatch()
+  const handleLogin = () => {
+      dispatch(loginUser({
+        userName: userName,
+        password: password
+      }))
+
+  }
+
+  return ( 
+    <div className="login-box">
+          <h2>Login</h2>
+          <form>
+            <div className="user-box">
+              <input type="text" name="" required="" onChange={(e) => handleChange(e , 'user')} />
+              <label>Username</label>
+            </div>
+            <div className="user-box">
+              <input type="password" name="" required="" onChange={(e) => handleChange(e , 'pass')} />
+              <label>Password</label>
+            </div>
+           <button type="button" onClick={handleLogin}> Đăng Nhập </button>
+          </form>
+        </div>
   );
-};
+}
 
-export default LoginForm;
+export default LoginWrapper ;

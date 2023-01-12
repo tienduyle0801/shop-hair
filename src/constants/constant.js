@@ -2,20 +2,31 @@
 export const ROUTE_PATH = {
   index: '/',
   home: '/home',
-  login: '/login',
-  register: '/register',
-  introduce: '/introduce'
+  introduce: '/introduce',
+  listprice : '/listprice',
+  login : '/login' ,
+  register : '/register' , 
+  training : '/training',
 };
 
 // Data header
 export const DATA_HEADER = [
   { id: 1, name: 'TRANG CHỦ', routerName: '/' },
   { id: 2, name: 'GIỚI THIỆU', routerName: '/introduce' },
-  { id: 3, name: 'BẢNG GIÁ DỊCH VỤ' },
-  { id: 4, name: 'ĐÀO TẠO' },
+  { id: 3, name: 'BẢNG GIÁ DỊCH VỤ',routerName: '/listprice' },
+  { id: 4, name: 'ĐÀO TẠO',routerName: '/training'},
   { id: 5, name: 'BLOG' },
   { id: 6, name: 'LIÊN HỆ' }
 ];
+
+//data author 
+export const DATA_AUTHOR = [{
+  id : 1 , name : 'Login' , routerName: '/login' 
+}, 
+{
+  id : 2 , name : 'Register' , routerName: '/register' 
+}
+]
 
 //Data Slide swiper
 export const DATA_SLIDE = [
@@ -49,3 +60,104 @@ export const DATA_INTRODUCE = [
       'Thay đổi kiểu tóc đã để suốt bao năm là một quyết định vô cùng khó khăn nhưng Phúc đã vượt qua nỗi sợ đó và tạo một kiểu tóc mới hoàn toàn '
   }
 ];
+
+
+export const DATA_PRICELIST = [{
+  id : 1 ,
+  title : 'Cắt tóc (combo 6 bước)',
+  price : [70000]
+},{
+  id : 2 ,
+  title : 'Cạo mặt',
+  price : [10000]
+},{
+  id : 3 ,
+  title : 'Lột mụn',
+  price : [30000]
+},
+{
+  id : 4 ,
+  title : 'Ráy Tai',
+  price : [50000]
+},{
+  id : 5 ,
+  title : 'Đắp mặt nạ dưỡng da',
+  price : [30000]
+},{
+  id : 6 ,
+  title : 'Gội đầu',
+  price : [20000]
+},{
+  id : 7 ,
+  title : 'Uốn tóc',
+  price : [150000 , 250000]
+},{
+  id : 8 ,
+  title : 'Uốn tóc Premlock',
+  price : [500000,1000000]
+},{
+  id : 9 ,
+  title : 'Uốn tóc texture(Con sâu)',
+  price : [300000,450000]
+},{
+  id : 10 ,
+  title : ' Duỗi tóc',
+  price : [250000]
+},{
+  id : 11 ,
+  title : 'Nhuộm màu 1 lần',
+  price : [200000]
+},{
+  id : 12 ,
+  title : 'Nhuộm đen',
+  price : [150000]
+},{
+  id : 13 ,
+  title : 'Nâng tông + Nhuộm',
+  price : [270000]
+},{
+  id : 14 ,
+  title : 'Tẩy tóc lần 1 + Nhuộm ',
+  price : [350000]
+},{
+  id : 15 ,
+  title : 'Tẩy tóc lần 2 + Nhuộm',
+  price : [450000]
+},{
+  id : 16 ,
+  title : 'Tẩy tóc bạch kim',
+  price : [500000,700000]
+},{
+  id : 17 ,
+  title : 'Ép side',
+  price : [70000,150000]
+},{
+  id : 18 ,
+  title : 'Xả uốn tóc',
+  price : [50000]
+},
+]
+
+
+export const DATA_COMBO = [{
+  id : 1 ,
+  title : 'COMBO VIP' , 
+  price : 400000 ,
+  image : 'https://artbarbershop.com/wp-content/uploads/2021/04/icon-combo-vip.png'
+},{
+  id : 2 ,
+  title : 'COMBO THƯ GIÃN' , 
+  price : 65000 ,
+  image : 'https://artbarbershop.com/wp-content/uploads/2021/04/icon-combo-goi-dau.png'
+},{
+  id : 3 ,
+  title : 'COMBO CẠO MẶT + RÁY TAI + ĐÁNH MẮT' , 
+  price : 85000 ,
+  image : 'https://artbarbershop.com/wp-content/uploads/2021/04/icon-cao-mat.png'
+},
+]
+
+export const DATA_INFORMATION = [{id : 1 , icon  : 'star' , title : "Kỹ thuật sử dụng kéo ,dao cạo, lược"},
+{id : 2 , icon  : 'star' , title : "Kỹ thuật sử dụng kéo ,dao cạo, lược"},
+{id : 3 , icon  : 'star' , title : "Kỹ thuật sử dụng kéo ,dao cạo, lược"},
+{id : 4 , icon  : 'star' , title : "Kỹ thuật sử dụng kéo ,dao cạo, lược"}]
